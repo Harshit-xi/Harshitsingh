@@ -1,68 +1,98 @@
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Mail, Github, Linkedin } from "lucide-react";
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>John Doe | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      background-color: #0f172a;
+      color: #f8fafc;
+    }
+    header {
+      text-align: center;
+      padding: 60px 20px;
+    }
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+    header p {
+      color: #94a3b8;
+      font-size: 1.2rem;
+    }
+    nav {
+      text-align: center;
+      margin: 20px;
+    }
+    nav a {
+      color: #38bdf8;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+    }
+    .card {
+      background-color: #1e293b;
+      padding: 20px;
+      border-radius: 12px;
+      margin-bottom: 20px;
+    }
+    .card h2 {
+      margin-top: 0;
+      color: #facc15;
+    }
+    .footer {
+      text-align: center;
+      padding: 30px;
+      font-size: 0.9rem;
+      color: #64748b;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>John Doe</h1>
+    <p>Full Stack Developer & Open Source Contributor</p>
+    <nav>
+      <a href="https://github.com/johndoe" target="_blank">GitHub</a>
+      <a href="#projects">Projects</a>
+      <a href="mailto:johndoe@example.com">Contact</a>
+    </nav>
+  </header>
 
-export default function Portfolio() {
-  return (
-    <div className="min-h-screen bg-gray-950 text-white p-6">
-      <header className="max-w-5xl mx-auto py-10 text-center">
-        <h1 className="text-5xl font-bold mb-4">John Doe</h1>
-        <p className="text-xl text-gray-400 mb-6">Full Stack Developer & Designer</p>
-        <div className="flex justify-center gap-4">
-          <Button variant="outline" size="icon" className="rounded-full">
-            <Github className="h-5 w-5" />
-          </Button>
-          <Button variant="outline" size="icon" className="rounded-full">
-            <Linkedin className="h-5 w-5" />
-          </Button>
-          <Button variant="outline" size="icon" className="rounded-full">
-            <Mail className="h-5 w-5" />
-          </Button>
-        </div>
-      </header>
+  <main class="container">
+    <section class="card">
+      <h2>About Me</h2>
+      <p>
+        I'm a developer who loves building useful tools, contributing to open-source, and writing clean, scalable code. I specialize in JavaScript, React, and backend development with Node.js.
+      </p>
+    </section>
 
-      <section className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
-        <Card className="bg-gray-900 shadow-xl">
-          <CardContent className="p-6">
-            <h2 className="text-2xl font-semibold mb-2">About Me</h2>
-            <p className="text-gray-300">
-              I'm a passionate developer who enjoys building responsive, user-centric applications. My expertise lies in React, Node.js, and UI/UX design.
-            </p>
-          </CardContent>
-        </Card>
+    <section class="card" id="projects">
+      <h2>Projects</h2>
+      <ul>
+        <li><strong>Awesome Portfolio</strong> – A clean and fast personal website. <a href="https://github.com/johndoe/awesome-portfolio" target="_blank">GitHub</a></li>
+        <li><strong>Todo App</strong> – Task manager built with React & Firebase. <a href="https://github.com/johndoe/todo-app" target="_blank">GitHub</a></li>
+        <li><strong>Blog Engine</strong> – Markdown blog with search and tags. <a href="https://github.com/johndoe/blog-engine" target="_blank">GitHub</a></li>
+      </ul>
+    </section>
 
-        <Card className="bg-gray-900 shadow-xl">
-          <CardContent className="p-6">
-            <h2 className="text-2xl font-semibold mb-2">Skills</h2>
-            <ul className="text-gray-300 list-disc ml-5">
-              <li>JavaScript / TypeScript</li>
-              <li>React / Next.js</li>
-              <li>Node.js / Express</li>
-              <li>Tailwind CSS / Figma</li>
-            </ul>
-          </CardContent>
-        </Card>
+    <section class="card">
+      <h2>Contact</h2>
+      <p>Email me at <a href="mailto:johndoe@example.com" style="color:#38bdf8">johndoe@example.com</a> or find me on <a href="https://linkedin.com/in/johndoe" target="_blank" style="color:#38bdf8">LinkedIn</a>.</p>
+    </section>
+  </main>
 
-        <Card className="bg-gray-900 shadow-xl md:col-span-2">
-          <CardContent className="p-6">
-            <h2 className="text-2xl font-semibold mb-4">Projects</h2>
-            <div className="grid md:grid-cols-2 gap-4">
-              <div className="bg-gray-800 p-4 rounded-xl">
-                <h3 className="text-lg font-bold mb-1">Portfolio Website</h3>
-                <p className="text-gray-400 text-sm">Built with React, Tailwind CSS, and modern design principles.</p>
-              </div>
-              <div className="bg-gray-800 p-4 rounded-xl">
-                <h3 className="text-lg font-bold mb-1">Task Manager App</h3>
-                <p className="text-gray-400 text-sm">A productivity app built with Next.js and Firebase.</p>
-              </div>
-            </div>
-          </CardContent>
-        </Card>
-      </section>
-
-      <footer className="max-w-5xl mx-auto mt-12 text-center text-gray-500">
-        <p>© 2025 John Doe. All rights reserved.</p>
-      </footer>
-    </div>
-  );
-}
+  <footer class="footer">
+    © 2025 John Doe. Built with ❤️ and deployed on GitHub Pages.
+  </footer>
+</body>
+</html>
