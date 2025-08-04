@@ -1,2 +1,2 @@
 # Harshitsingh
-Hi welcome to may portfolio
+Hi welcome to my portfolio
