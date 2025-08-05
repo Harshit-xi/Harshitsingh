@@ -1,1 +1,140 @@
+:root {
+  --bg1: #0f0c29;
+  --bg2: #302b63;
+  --bg3: #24243e;
+  --glow: #9f6bff;
+  --text: #ffffff;
+  --muted: #999;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(135deg, var(--bg1), var(--bg2), var(--bg3));
+  color: var(--text);
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 30px;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+}
+
+.logo {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 24px;
+  color: var(--glow);
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: var(--text);
+  transition: 0.3s;
+  position: relative;
+}
+
+.nav a:hover {
+  color: var(--glow);
+}
+
+.nav .btn {
+  padding: 8px 16px;
+  border: 1px solid var(--glow);
+  border-radius: 20px;
+  transition: 0.3s;
+}
+
+.nav .btn:hover {
+  background-color: var(--glow);
+  color: black;
+}
+
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 80px 0;
+}
+
+.hero-text {
+  flex: 1;
+  min-width: 280px;
+}
+
+.hero-text .intro {
+  font-size: 1.2rem;
+  color: var(--muted);
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--glow);
+}
+
+.typing {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  color: var(--muted);
+  min-height: 30px;
+}
+
+.socials {
+  margin-top: 30px;
+  display: flex;
+  gap: 15px;
+}
+
+.socials a {
+  display: flex;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.1);
+  transition: 0.3s;
+}
+
+.socials a:hover {
+  background-color: var(--glow);
+}
+
+.socials img {
+  width: 20px;
+  filter: invert(1);
+}
+
+.hero-image {
+  flex: 1;
+  text-align: center;
+}
+
+.hero-image img {
+  width: 280px;
+  border-radius: 20px;
+  box-shadow: 0 0 25px var(--glow);
+  transition: transform 0.3s ease;
+}
+
+.hero-image img:hover {
+  transform: scale(1.05);
+}
 
