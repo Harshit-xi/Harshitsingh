@@ -3,166 +3,180 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>John Doe | Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet" />
+  <title>Tomasz Gajda | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg: #0b0c10;
-      --glass: rgba(255, 255, 255, 0.05);
-      --border: rgba(255, 255, 255, 0.1);
-      --text: #f8f8f2;
-      --accent: #d4af37;
+      --black: #000;
+      --gray: #d4d4d4;
+      --text: #333;
+      --accent: #111;
+      --muted: #777;
     }
 
     * {
+      margin: 0;
+      padding: 0;
       box-sizing: border-box;
     }
 
     body {
-      margin: 0;
       font-family: 'Inter', sans-serif;
-      background: var(--bg);
+      background: var(--black);
       color: var(--text);
       overflow-x: hidden;
     }
 
     header {
-      text-align: center;
-      padding: 100px 20px 60px;
+      display: flex;
+      height: 100vh;
+      background: linear-gradient(to right, var(--gray) 50%, var(--black) 50%);
     }
 
-    header h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 3.5rem;
-      color: var(--accent);
-      margin-bottom: 10px;
+    .left {
+      width: 50%;
+      padding: 80px 60px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
     }
 
-    header p {
-      color: #b0b0b0;
-      font-size: 1.2rem;
-      max-width: 600px;
-      margin: 0 auto;
+    .right {
+      width: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
     }
 
     nav {
-      margin-top: 30px;
+      position: absolute;
+      top: 40px;
+      right: 60px;
+      display: flex;
+      gap: 30px;
+      font-size: 14px;
+      align-items: center;
     }
 
     nav a {
-      color: var(--accent);
+      color: white;
       text-decoration: none;
-      margin: 0 15px;
+      font-weight: 500;
+    }
+
+    .contact-button {
+      background: white;
+      color: black;
+      padding: 8px 16px;
+      border-radius: 30px;
+      font-size: 14px;
       font-weight: 600;
-      border-bottom: 1px solid transparent;
-      transition: 0.3s ease;
+      text-decoration: none;
     }
 
-    nav a:hover {
-      border-color: var(--accent);
+    .logo {
+      position: absolute;
+      top: 40px;
+      left: 60px;
+      font-weight: bold;
+      font-size: 20px;
     }
 
-    .container {
-      max-width: 1000px;
-      margin: auto;
-      padding: 30px;
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 0.3rem;
     }
 
-    .card {
-      background: var(--glass);
-      border: 1px solid var(--border);
+    h2 {
+      color: var(--muted);
+      font-weight: 400;
+      font-size: 1.1rem;
+    }
+
+    .socials {
+      margin-top: 30px;
+      display: flex;
+      gap: 15px;
+    }
+
+    .socials a {
+      background: white;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      color: black;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    }
+
+    .profile-img {
+      width: 80%;
+      max-width: 400px;
       border-radius: 20px;
-      padding: 30px;
-      margin-bottom: 30px;
-      backdrop-filter: blur(10px);
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-      transition: transform 0.3s ease;
     }
 
-    .card:hover {
-      transform: scale(1.02);
-    }
-
-    .card h2 {
-      font-family: 'Playfair Display', serif;
-      color: var(--accent);
-      font-size: 1.6rem;
-    }
-
-    .card p,
-    .card li {
-      color: #ccc;
-      font-size: 1rem;
-    }
-
-    .footer {
-      text-align: center;
-      color: #666;
-      padding: 40px;
-      font-size: 0.9rem;
-    }
-
-    .fade-up {
-      opacity: 0;
-      transform: translateY(20px);
-      animation: fadeUp 0.6s ease forwards;
-    }
-
-    .fade-up:nth-child(1) { animation-delay: 0.2s; }
-    .fade-up:nth-child(2) { animation-delay: 0.4s; }
-    .fade-up:nth-child(3) { animation-delay: 0.6s; }
-
-    @keyframes fadeUp {
-      to {
-        opacity: 1;
-        transform: translateY(0);
+    @media screen and (max-width: 768px) {
+      header {
+        flex-direction: column;
+        background: var(--gray);
       }
-    }
 
-    a {
-      color: var(--accent);
+      .left, .right {
+        width: 100%;
+        padding: 40px;
+      }
+
+      nav {
+        position: static;
+        justify-content: center;
+        margin-bottom: 20px;
+      }
+
+      .logo {
+        position: static;
+        text-align: center;
+        margin-bottom: 10px;
+      }
+
+      .profile-img {
+        width: 60%;
+      }
     }
   </style>
 </head>
 <body>
 
   <header>
-    <h1 class="fade-up">John Doe</h1>
-    <p class="fade-up">Crafting beautiful web experiences with precision and elegance.</p>
-    <nav class="fade-up">
-      <a href="https://github.com/johndoe" target="_blank">GitHub</a>
-      <a href="#projects">Projects</a>
-      <a href="mailto:johndoe@example.com">Contact</a>
+    <div class="left">
+      <div class="logo">TG</div>
+      <h3>Hi, I am</h3>
+      <h1>Tomasz Gajda</h1>
+      <h2>Front-end Developer / UI Designer</h2>
+
+      <div class="socials">
+        <a href="#"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/github.svg" width="20" alt="GitHub" /></a>
+        <a href="#"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/codepen.svg" width="20" alt="Codepen" /></a>
+        <a href="#"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/linkedin.svg" width="20" alt="LinkedIn" /></a>
+      </div>
+    </div>
+
+    <div class="right">
+      <img src="your-profile-photo.png" alt="Profile Photo" class="profile-img" />
+    </div>
+
+    <nav>
+      <a href="#">About me</a>
+      <a href="#">Skills</a>
+      <a href="#">Portfolio</a>
+      <a href="#" class="contact-button">CONTACT ME</a>
     </nav>
   </header>
 
-  <main class="container">
-    <section class="card fade-up">
-      <h2>About Me</h2>
-      <p>
-        I’m a full-stack developer blending form and function in web design. With a focus on performance, accessibility, and luxury-grade UI, I create products that feel effortless.
-      </p>
-    </section>
-
-    <section class="card fade-up" id="projects">
-      <h2>Featured Projects</h2>
-      <ul>
-        <li><strong>Elegance UI</strong> – Premium component library. <a href="https://github.com/johndoe/elegance-ui" target="_blank">View on GitHub</a></li>
-        <li><strong>Gilded Blog</strong> – A blog with typography-first design. <a href="https://github.com/johndoe/gilded-blog" target="_blank">View on GitHub</a></li>
-        <li><strong>CryptoDash</strong> – A luxury-themed crypto dashboard. <a href="https://github.com/johndoe/cryptodash" target="_blank">View on GitHub</a></li>
-      </ul>
-    </section>
-
-    <section class="card fade-up">
-      <h2>Contact</h2>
-      <p>Email: <a href="mailto:johndoe@example.com">johndoe@example.com</a></p>
-      <p>LinkedIn: <a href="https://linkedin.com/in/johndoe" target="_blank">linkedin.com/in/johndoe</a></p>
-    </section>
-  </main>
-
-  <footer class="footer">
-    © 2025 John Doe. Designed with purpose and precision.
-  </footer>
-
 </body>
 </html>
+
