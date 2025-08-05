@@ -2,181 +2,40 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tomasz Gajda | Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --black: #000;
-      --gray: #d4d4d4;
-      --text: #333;
-      --accent: #111;
-      --muted: #777;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Inter', sans-serif;
-      background: var(--black);
-      color: var(--text);
-      overflow-x: hidden;
-    }
-
-    header {
-      display: flex;
-      height: 100vh;
-      background: linear-gradient(to right, var(--gray) 50%, var(--black) 50%);
-    }
-
-    .left {
-      width: 50%;
-      padding: 80px 60px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      position: relative;
-    }
-
-    .right {
-      width: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-    }
-
-    nav {
-      position: absolute;
-      top: 40px;
-      right: 60px;
-      display: flex;
-      gap: 30px;
-      font-size: 14px;
-      align-items: center;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: 500;
-    }
-
-    .contact-button {
-      background: white;
-      color: black;
-      padding: 8px 16px;
-      border-radius: 30px;
-      font-size: 14px;
-      font-weight: 600;
-      text-decoration: none;
-    }
-
-    .logo {
-      position: absolute;
-      top: 40px;
-      left: 60px;
-      font-weight: bold;
-      font-size: 20px;
-    }
-
-    h1 {
-      font-size: 3rem;
-      margin-bottom: 0.3rem;
-    }
-
-    h2 {
-      color: var(--muted);
-      font-weight: 400;
-      font-size: 1.1rem;
-    }
-
-    .socials {
-      margin-top: 30px;
-      display: flex;
-      gap: 15px;
-    }
-
-    .socials a {
-      background: white;
-      border-radius: 50%;
-      width: 40px;
-      height: 40px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-decoration: none;
-      color: black;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-    }
-
-    .profile-img {
-      width: 80%;
-      max-width: 400px;
-      border-radius: 20px;
-    }
-
-    @media screen and (max-width: 768px) {
-      header {
-        flex-direction: column;
-        background: var(--gray);
-      }
-
-      .left, .right {
-        width: 100%;
-        padding: 40px;
-      }
-
-      nav {
-        position: static;
-        justify-content: center;
-        margin-bottom: 20px;
-      }
-
-      .logo {
-        position: static;
-        text-align: center;
-        margin-bottom: 10px;
-      }
-
-      .profile-img {
-        width: 60%;
-      }
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Harshit Singh | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
-  <header>
-    <div class="left">
-      <div class="logo">TG</div>
-      <h3>Hi, I am</h3>
-      <h1>Tomasz Gajda</h1>
-      <h2>Front-end Developer / UI Designer</h2>
-
-      <div class="socials">
-        <a href="#"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/github.svg" width="20" alt="GitHub" /></a>
-        <a href="#"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/codepen.svg" width="20" alt="Codepen" /></a>
-        <a href="#"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/linkedin.svg" width="20" alt="LinkedIn" /></a>
-      </div>
-    </div>
-
-    <div class="right">
-      <img src="your-profile-photo.png" alt="Profile Photo" class="profile-img" />
-    </div>
-
-    <nav>
-      <a href="#">About me</a>
-      <a href="#">Skills</a>
-      <a href="#">Portfolio</a>
-      <a href="#" class="contact-button">CONTACT ME</a>
+  <div class="container">
+    <nav class="nav">
+      <div class="logo">HS</div>
+      <ul>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Skills</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="#" class="btn">Contact</a></li>
+      </ul>
     </nav>
-  </header>
 
+    <section class="hero">
+      <div class="hero-text">
+        <p class="intro">Hi, I am</p>
+        <h1>Harshit Singh</h1>
+        <p class="typing" id="typing"></p>
+        <div class="socials">
+          <a href="#"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/github.svg" alt="GitHub"/></a>
+          <a href="#"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/linkedin.svg" alt="LinkedIn"/></a>
+          <a href="#"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" alt="Twitter"/></a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="avatar.png" alt="Harshit Singh" />
+      </div>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
-
