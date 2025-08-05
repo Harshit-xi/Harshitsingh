@@ -148,3 +148,27 @@ nav {
     transform: scale(1);
   }
 }
+.hero-bars {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 2rem;
+  overflow: hidden;
+}
+
+.bar {
+  width: 40px;
+  height: 300px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #00f0ff, #ff00e0, #0e0e0e);
+  background-size: 200% 200%;
+  animation: animateBar 4s ease-in-out infinite;
+  opacity: 0.9;
+}
+
+@keyframes animateBar {
+  0% { background-position: 0% 50%; transform: scaleY(0.9); }
+  50% { background-position: 100% 50%; transform: scaleY(1.05); }
+  100% { background-position: 0% 50%; transform: scaleY(0.9); }
+}
+
